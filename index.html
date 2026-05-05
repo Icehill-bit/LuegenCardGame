@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luegen-Nick</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main-menu">
+    <button id="btn-singleplayer">Singleplayer</button>   
+    <button id="btn-multiplayer">Multiplayer</button>
+    </div>
+    
+    
+    <div id ="game-board"> 
+    <section id="top-hud">
+        <h1 id="game-mode-title">Game Mode</h1>
+        <p id="turn-indicator">Turn: -</p>
+        <p id="card-display"></p>
+
+        <section id="turn-actions">
+            <label for="claim-rank">Call Rank:</label>
+            <select id="claim-rank">
+                <option value="A">A</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="J">J</option>
+                <option value="Q">Q</option>
+                <option value="K">K</option>
+            </select>
+            <button id="btn-call-bluff" type="button">Call Bluff</button>
+        </section>
+
+        <p id="last-call">Last call: none</p>
+    </section>
+
+    <section id="table-players" aria-label="Players around table">
+        <div class="table-seat" id="seat-north">
+            <div class="turn-marker">TURN</div>
+            <img class="seat-avatar" alt="North player avatar">
+            <p class="seat-name">-</p>
+        </div>
+        <div class="table-seat" id="seat-east">
+            <div class="turn-marker">TURN</div>
+            <img class="seat-avatar" alt="East player avatar">
+            <p class="seat-name">-</p>
+        </div>
+        <div class="table-seat" id="seat-west">
+            <div class="turn-marker">TURN</div>
+            <img class="seat-avatar" alt="West player avatar">
+            <p class="seat-name">-</p>
+        </div>
+        <div class="table-seat" id="seat-south">
+            <div class="turn-marker">TURN</div>
+            <img class="seat-avatar" alt="South player avatar">
+            <p class="seat-name">-</p>
+        </div>
+    </section>
+
+    <section id="center-pile-visual" aria-label="Center pile"></section>
+
+    <section id="player-hand-section">
+        <h2 id="player-hand-title">Your Hand</h2>
+        <div id="hand-controls">
+            <button id="btn-play-selected" type="button">Play Selected</button>
+            <button id="btn-sort-hand" type="button">Sort</button>
+        </div>
+        <div id="player-hand"></div>
+    </section>
+
+    <section id="play-log-section">
+        <h3>Play Log</h3>
+        <ul id="play-log"></ul>
+    </section>
+
+    <section id="win-overlay" aria-live="polite">
+        <div id="win-banner">
+            <h2 id="win-title">Winner</h2>
+            <p id="win-subtitle">Great play</p>
+            <div id="win-confetti"></div>
+        </div>
+    </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
